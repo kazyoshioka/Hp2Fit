@@ -1,3 +1,21 @@
-function myFunction() {
-  
+
+const SCALE_MODEL = "BC-768";
+
+const HEALTHPLANET_API_CLIENT_ID = "18397.V7arE6aITT.apps.healthplanet.jp";
+const HEALTHPLANET_API_CLIENT_SECRET = "1709388383806-zCeVki0IYe6ptDZGrBPsrc3aq5MqxVUBNSbEUsRN";
+
+const GOOGLE_API_CLIENT_ID = "488039855945-v7utlrsg5271klucevpl5n80gekhousb.apps.googleusercontent.com";
+const GOOGLE_API_CLIENT_SECRET = "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";
+
+const FITBIT_API_CLIENT_ID = "23RRLH";
+const FITBIT_API_CLIENT_SECRET = "b1f29ef60ff0b171dd521b2ac1df1840";
+
+function setProps(){
+  const property = PropertiesService.getScriptProperties();
+  property.setProperty('HEALTHPLANET_API_CLIENT_ID',HEALTHPLANET_API_CLIENT_ID);
+  property.setProperty('HEALTHPLANET_API_CLIENT_SECRET',HEALTHPLANET_API_CLIENT_SECRET);
+  property.setProperty('GOOGLE_API_CLIENT_ID',GOOGLE_API_CLIENT_ID);
+  property.setProperty('GOOGLE_API_CLIENT_SECRET',GOOGLE_API_CLIENT_SECRET);
+  property.setProperty('FITBIT_API_CLIENT_ID',FITBIT_API_CLIENT_ID);
+  property.setProperty('FITBIT_API_CLIENT_SECRET',FITBIT_API_CLIENT_SECRET);
 }

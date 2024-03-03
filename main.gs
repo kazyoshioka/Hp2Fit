@@ -64,16 +64,16 @@ const run = () => {
     console.log(gfService.getAuthorizationUrl());
   }
 
-  const fbService = getFBService();
+  //const fbService = getFBService();
 
   // Fitbitへの認証が完了していない場合は認証用URLを出力して終了する
-  if (fbService.hasAccess()) {
-    console.log("Fitbit is ready");
-    fbPostHealthData(fbService,healthData);
-  } else {
-    console.log("Please go to the URL below to complete the authentication with Fitbit");
-    console.log(fbService.getAuthorizationUrl());
-  }
+  //if (fbService.hasAccess()) {
+  //  console.log("Fitbit is ready");
+  //  fbPostHealthData(fbService,healthData);
+  //} else {
+  //  console.log("Please go to the URL below to complete the authentication with Fitbit");
+  //  console.log(fbService.getAuthorizationUrl());
+  //}
 }
 
 /**
@@ -83,7 +83,7 @@ const run = () => {
 const logoutFromService = () => {
   getHPService().reset();
   getGFService().reset();
-  getFBService().reset();
+  //getFBService().reset();
   property.deleteAllProperties();
   console.log("Logged out successfully")
 }
